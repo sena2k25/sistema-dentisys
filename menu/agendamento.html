@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Consulta - Clínica Odontológica</title>
+    <link rel="stylesheet" href="agendamento.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Agendar Sua Consulta</h1>
+            <p>Preencha os dados abaixo para solicitar seu horário na clínica odontológica.</p>
+        </header>
+
+        <form class="appointment-form" action="#" method="POST">
+            
+            <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="especialidade">Especialidade Desejada</label>
+                <select id="especialidade" name="especialidade" required>
+                    <option value="" disabled selected>Selecione uma especialidade</option>
+                    <option value="clinico-geral">Clínico Geral</option>
+                    <option value="ortodontia">Ortodontia (Aparelhos)</option>
+                    <option value="endodontia">Endodontia (Canal)</option>
+                    <option value="periodontia">Periodontia (Gengiva)</option>
+                    <option value="implantodontia">Implantodontia (Implantes)</option>
+                    <option value="odontopediatria">Odontopediatria (Crianças)</option>
+                    <option value="estetica">Dentística / Estética Dental</option>
+                    <option value="proteses">Próteses Dentárias</option>
+                </select>
+            </div>
+
+            <div class="form-group half-width">
+                <label for="data">Data Preferencial</label>
+                <input type="date" id="data" name="data" required>
+            </div>
+
+            <div class="form-group half-width">
+                <label for="hora">Horário Preferencial</label>
+                <input type="time" id="hora" name="hora" required>
+            </div>
+
+            <div class="form-group">
+                <label for="observacoes">Observações (Opcional)</label>
+                <textarea id="observacoes" name="observacoes" rows="4" placeholder="Ex: Dor de dente, avaliação estética, limpeza..."></textarea>
+            </div>
+            
+            <button type="submit" class="btn-submit">Confirmar Agendamento</button>
+
+        </form>
+    </div>
+</body>
+</html>

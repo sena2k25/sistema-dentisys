@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sistema de Atestado Odontológico Dentisys</title>
+<!-- Importando fonte estilizada para logo -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+  }
+  .certificate-container {
+    background: #ffffff;
+    max-width: 600px;
+    width: 100%;
+    padding: 30px 40px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    border-radius: 12px;
+    color: #1e3c72;
+  }
+  .logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 48px;
+    color: #1e3c72;
+    text-align: center;
+    margin-bottom: 15px;
+    user-select: none;
+  }
+  h1 {
+    text-align: center;
+    color: #1e3c72;
+    margin-bottom: 6px;
+    font-weight: 700;
+  }
+  p.subtitle {
+    text-align: center;
+    color: #406090;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-style: italic;
+  }
+  label {
+    font-weight: 600;
+    color: #1e3c72;
+    display: block;
+    margin-bottom: 6px;
+    margin-top: 20px;
+  }
+  input[type="text"],
+  input[type="date"],
+  textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1.5px solid #a9bacf;
+    font-size: 1rem;
+    color: #334e68;
+    resize: vertical;
+  }
+  textarea {
+    min-height: 80px;
+  }
+  .signature {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .signature-block {
+    text-align: center;
+    width: 40%;
+  }
+  .signature-line {
+    border-top: 2px solid #1e3c72;
+    margin-top: 40px;
+    width: 100%;
+  }
+  .btn-print {
+    margin-top: 35px;
+    width: 100%;
+    background: #1e3c72;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+  }
+  .btn-print:hover {
+    background-color: #16345f;
+  }
+  @media print {
+    body {
+      background: white;
+      padding: 0;
+      margin: 0;
+      color: #000;
+    }
+    .btn-print {
+      display: none;
+    }
+    .certificate-container {
+      box-shadow: none;
+      border-radius: 0;
+      padding: 0;
+      color: #000;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="certificate-container">
+    <h1>Atestado Odontológico</h1>
+    <p class="subtitle">Declara que o paciente apresentou quadro clínico necessitando afastamento</p>
+    <form id="atestadoForm" onsubmit="return false;">
+      <label for="nomePaciente">Nome do Paciente:</label>
+      <input type="text" id="nomePaciente" name="nomePaciente" placeholder="Digite o nome completo" required />
+
+      <label for="motivo">Motivo do Afastamento:</label>
+      <textarea id="motivo" name="motivo" placeholder="Descreva o motivo" required></textarea>
+
+      <label for="dataAfastamento">Data do Atestado:</label>
+      <input type="date" id="dataAfastamento" name="dataAfastamento" required />
+
+      <div class="signature">
+        <div class="signature-block">
+          <div class="signature-line"></div>
+          <p>Médico Responsável</p>
+        </div>
+        <div class="signature-block">
+          <div class="signature-line"></div>
+          <p>CRM</p>
+        </div>
+      </div>
+
+      <button class="btn-print" onclick="window.print()">Imprimir Atestado</button>
+    </form>
+  </div>
+</body>
+</html>

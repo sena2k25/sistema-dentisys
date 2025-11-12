@@ -1,0 +1,213 @@
+:root {
+  --azul: #007bff;   
+  --verde: #28a745;
+  --vermelho: #dc3545;
+  --cinza: #f4f6f8;
+  --branco: #ffffff;
+  --sombra: rgba(0, 0, 0, 0.1);
+}
+
+/* ==== Estrutura Geral ==== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--cinza);
+  margin: 0;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ==== Cabeçalho ==== */
+.topo {
+  background: var(--azul);
+  color: var(--branco);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 6px var(--sombra);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* ==== Botão Voltar ==== */
+.btn-voltar {
+  background: var(--branco);
+  color: var(--azul);
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-voltar:hover {
+  background: var(--azul);
+  color: var(--branco);
+}
+
+/* ==== Conteúdo Principal ==== */
+main {
+  flex: 1;
+  padding: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ==== Cards de Resumo ==== */
+.resumo {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.card {
+  background-color: var(--branco);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px var(--sombra);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.valor {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.receita {
+  color: var(--verde);
+}
+
+.despesa {
+  color: var(--vermelho);
+}
+
+/* ==== Tabela ==== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+  background-color: var(--branco);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px var(--sombra);
+}
+
+th, td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: var(--azul);
+  color: var(--branco);
+}
+
+tr:hover {
+  background-color: #eef4ff;
+}
+
+/* ==== NOVO FORMULÁRIO DE LANÇAMENTO ==== */
+.novo-lancamento {
+  background-color: var(--branco);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px var(--sombra);
+  border: 1px solid #ddd;
+  margin-top: 40px;
+}
+
+.novo-lancamento h2 {
+  color: var(--azul);
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 25px;
+  border-bottom: 3px solid var(--azul);
+  display: inline-block;
+  padding-bottom: 5px;
+  width: 100%;
+}
+
+.novo-lancamento form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+input, select {
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: 0.3s;
+  background-color: #f8faff;
+}
+
+input:focus, select:focus {
+  border-color: var(--azul);
+  background-color: var(--branco);
+  box-shadow: 0 0 8px rgba(0,72,180,0.25);
+  outline: none;
+}
+
+button {
+  background: linear-gradient(135deg, var(--azul), #005fe0);
+  color: var(--branco);
+  border: none;
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 250px;
+  margin: 20px auto 0;
+  display: block;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0,72,180,0.25);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,72,180,0.3);
+}
+
+/* ==== Rodapé ==== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--azul);
+  color: var(--branco);
+  margin-top: 40px;
+  box-shadow: 0 -3px 6px var(--sombra);
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Clínica Odontológica (HTML/CSS)</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Cadastro de Usuários</h1>
+
+        <div class="tabs">
+            <input type="radio" id="tab-pacientes" name="tab-group" checked>
+            <input type="radio" id="tab-dentistas" name="tab-group">
+            <input type="radio" id="tab-funcionarios" name="tab-group">
+
+            <div class="tab-labels">
+                <label for="tab-pacientes">Pacientes</label>
+                <label for="tab-dentistas">Dentistas</label>
+                <label for="tab-funcionarios">Funcionários</label>
+            </div>
+
+            <div class="tab-content">
+                <div id="content-pacientes" class="form-section">
+                    <h2>Cadastro de Pacientes</h2>
+                    <form class="form">
+                        <div class="form-group">
+                            <label for="paciente-nome">Nome Completo</label>
+                            <input type="text" id="paciente-nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="paciente-cpf">CPF</label>
+                            <input type="text" id="paciente-cpf" placeholder="Ex: 000.000.000-00" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="paciente-nascimento">Data de Nascimento</label>
+                            <input type="date" id="paciente-nascimento" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="paciente-telefone">Telefone</label>
+                            <input type="tel" id="paciente-telefone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="paciente-alergias">Alergias/Condições</label>
+                            <textarea id="paciente-alergias" rows="3"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Cadastrar Paciente</button>
+                    </form>
+                </div>
+
+                <div id="content-dentistas" class="form-section">
+                    <h2>Cadastro de Dentistas</h2>
+                    <form class="form">
+                        <div class="form-group">
+                            <label for="dentista-nome">Nome Completo</label>
+                            <input type="text" id="dentista-nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dentista-cro">Número do CRO</label>
+                            <input type="text" id="dentista-cro" placeholder="Ex: SP-12345" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dentista-especialidade">Especialidade</label>
+                            <select id="dentista-especialidade" required>
+                                <option value="">Selecione...</option>
+                                <option value="geral">Clínico Geral</option>
+                                <option value="orto">Ortodontia</option>
+                                <option value="endo">Endodontia</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="dentista-email">E-mail</label>
+                            <input type="email" id="dentista-email" required>
+                        </div>
+                        <button type="submit" class="btn btn-success">Cadastrar Dentista</button>
+                    </form>
+                </div>
+
+                <div id="content-funcionarios" class="form-section">
+                    <h2>Cadastro de Funcionários</h2>
+                    <form class="form">
+                        <div class="form-group">
+                            <label for="funcionario-nome">Nome Completo</label>
+                            <input type="text" id="funcionario-nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="funcionario-cargo">Cargo</label>
+                            <input type="text" id="funcionario-cargo" placeholder="Ex: Recepcionista, Auxiliar" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="funcionario-matricula">Matrícula</label>
+                            <input type="text" id="funcionario-matricula" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="funcionario-contratacao">Data de Contratação</label>
+                            <input type="date" id="funcionario-contratacao" required>
+                        </div>
+                        <button type="submit" class="btn btn-warning">Cadastrar Funcionário</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Redireciona para o menu após qualquer cadastro
+        const forms = document.querySelectorAll("form");
+        forms.forEach(form => {
+            form.addEventListener("submit", function(e) {
+                e.preventDefault();
+                alert("Cadastro realizado com sucesso!");
+                window.location.href = "menu.html"; // Redireciona para o menu
+            });
+        });
+    </script>
+
+</body>
+</html>

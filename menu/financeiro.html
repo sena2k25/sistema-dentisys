@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema Financeiro - DentiSys</title>
+  <link rel="stylesheet" href="financeiro.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="topo">
+    <img src =
+    <h1 class="logo">🦷 DentiSys</h1>
+    <nav>
+      <a href="menu.html" class="btn-voltar">← Voltar ao Menu</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="resumo">
+      <div class="card">
+        <h2>Saldo Atual</h2>
+        <p class="valor">R$ 10.470,00</p>
+      </div>
+      <div class="card">
+        <h2>Receitas do Mês</h2>
+        <p class="valor receita">R$ 20.000,00</p>
+      </div>
+      <div class="card">
+        <h2>Despesas do Mês</h2>
+        <p class="valor despesa">R$ 8.780,00</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Lançamentos Recentes</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Descrição</th>
+            <th>Tipo</th>
+            <th>Data</th>
+            <th>Valor</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Consulta - Pedro Alves</td>
+            <td class="receita">Receita</td>
+            <td>12/11/2025</td>
+            <td>R$ 180,00</td>
+            <td class="receita">Pago</td>
+          </tr>
+          <tr>
+            <td>Compra de Materiais</td>
+            <td class="despesa">Despesa</td>
+            <td>10/11/2025</td>
+            <td>R$ 750,00</td>
+            <td class="despesa">Pendente</td>
+          </tr>
+          <tr>
+            <td>Pagamento Aluguel</td>
+            <td class="despesa">Despesa</td>
+            <td>01/11/2025</td>
+            <td>R$ 3.500,00</td>
+            <td class="receita">Pago</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="novo-lancamento">
+      <h2>Novo Lançamento</h2>
+      <form>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="descricao">Descrição</label>
+            <input type="text" id="descricao" placeholder="Ex: Consulta, Compra de Material" required>
+          </div>
+
+          <div class="form-group">
+            <label for="tipo">Tipo</label>
+            <select id="tipo" required>
+              <option value="">Selecione</option>
+              <option value="receita">Receita</option>
+              <option value="despesa">Despesa</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="valor">Valor</label>
+            <input type="number" id="valor" placeholder="Ex: 150.00" required>
+          </div>
+
+          <div class="form-group">
+            <label for="status">Status</label>
+            <select id="status" required>
+              <option value="">Selecione</option>
+              <option value="pago">Pago</option>
+              <option value="pendente">Pendente</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit">Adicionar Lançamento</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 DentiSys - Clínica Odontológica</p>
+  </footer>
+</body>
+</html>

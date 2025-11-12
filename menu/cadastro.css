@@ -1,0 +1,171 @@
+
+:root {
+    --primary: #007bff; /* Azul primário */
+    --success: #28a745; /* Verde para sucesso */
+    --warning: #ffc107; /* Amarelo para alertas */
+    --white: white;
+    --text-dark: #333;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+h1, h2 {
+    color: var(--text-dark);
+    text-align: center;
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="tel"],
+.form input[type="date"],
+.form select,
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-size: 16px;
+}
+
+.form textarea {
+    resize: vertical;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--white); 
+    transition: background-color 0.3s;
+    width: 100%; 
+    margin-top: 10px;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; 
+}
+
+.btn-success {
+    background-color: var(--success);
+}
+
+.btn-success:hover {
+    background-color: #1e7e34;
+}
+
+.btn-warning {
+    background-color: var(--warning);
+    color: var(--text-dark); 
+}
+
+.btn-warning:hover {
+    background-color: #d39e00;
+}
+
+
+
+.tabs input[type="radio"] {
+    display: none;
+}
+
+.tab-labels {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.tab-labels label {
+    flex-grow: 1;
+    text-align: center;
+    padding: 15px 10px;
+    cursor: pointer;
+    background-color: #e9ecef;
+    color: var(--text-dark);
+    font-weight: bold;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin-right: 2px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.tab-labels label:hover {
+    background-color: #dee2e6;
+}
+
+
+.form-section {
+    display: none;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+
+
+
+#tab-pacientes:checked ~ .tab-labels label[for="tab-pacientes"],
+#tab-dentistas:checked ~ .tab-labels label[for="tab-dentistas"],
+#tab-funcionarios:checked ~ .tab-labels label[for="tab-funcionarios"] {
+    background-color: var(--primary);
+    color: var(--white);
+    border-bottom: 2px solid var(--primary); 
+    transform: translateY(2px); 
+}
+
+
+
+
+#tab-pacientes:checked ~ .tab-content #content-pacientes {
+    display: block;
+}
+
+
+#tab-dentistas:checked ~ .tab-content #content-dentistas {
+    display: block;
+}
+
+
+#tab-funcionarios:checked ~ .tab-content #content-funcionarios {
+    display: block;
+}
